@@ -1,0 +1,30 @@
+@function px2rem($px){
+   return  $px/$designWidth*10+rem;
+}
+
+  $desiginWidth : 640px;
+  
+  
+  *{margin: 0; padding: 0;}
+  *{box-sizing: border-box;}
+  body{
+    font-size:16px;
+  }
+  .child{
+    border: 1px solid red;
+    background: #ddd;
+    // width: 0.4rem;
+    width: px2rem(320);
+    // height: 0.4rem;
+    height: px2rem(320);
+    // margin:0.05rem;
+    margin:　px2rem(40) px2rem(40);
+    float:left;
+    font-size: 1em;
+    
+  }
+  .clearfix::after{
+    content: '';
+    clear:both;
+    display: block;
+  }
